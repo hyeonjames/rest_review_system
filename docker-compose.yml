@@ -1,0 +1,21 @@
+version: '2.1'
+services:
+  db:
+    container_name: mysql_rest_service ## 수정시 application.properties 도 같이 수정해주세요.
+    build: mysql/.
+    volumes:
+      - ./mysql/logs:/var/log/mysql
+      - ./mysql/volumes:/var/lib/mysql
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=a1234567@
+      - MYSQL_PORT=3306
+  web:
+    container_name: tomcat_rest_service 
+    ports:
+      - "80:8080"
+    volumes:
+      - ./client/dist:/usr/local/tomcat/webapps/ROOT
+    build: tomcat/.
+    

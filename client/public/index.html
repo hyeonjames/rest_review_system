@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>rest-review-client</title>
+    <!-- 다음 주소찾기 API -->
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d8fb46056e2c542c227474796892be9&libraries=services"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <style>
+      .form {
+          padding : 10px;
+      }
+      .right {
+        float:right;
+      }
+      .img150 {
+        width : 150px;
+        height : 150px;
+      }
+      .img50 {
+        width : 50px;
+        height : 50px;
+      }
+      .img200 {
+        width : 200px;
+        height : 200px;
+      }
+      .img100 {
+        width :100px;
+        height : 100px;
+      }
+      .valid-wrong {
+          border-color:red;
+      }
+      .rest-item {
+        border-bottom : 1px solid gray;
+        padding-bottom: 5px;
+        padding-top:5px;
+        cursor:pointer;
+      }
+      .rest-item:hover {
+        background-color: lightgray;
+      }
+      .rest-item:last-child {
+        border-bottom: 0;
+      }
+      .mr-3 {
+        margin-bottom:5px;
+      }
+      .btn {
+        margin-left : 5px;
+      }
+      .review-item {
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 5px;
+        cursor:pointer;
+      }
+      .review-item :last-child {
+        border:0;
+      }
+      .review-item:hover {
+        background-color:lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div  class="container">
+      <div id="app">
+        
+        <router-view></router-view>
+      </div>
+    
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
